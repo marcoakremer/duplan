@@ -1,5 +1,5 @@
-const dotenv = require("dotenv");
-dotenv.config()
+// const dotenv = require("dotenv");
+// dotenv.config()
 
 console.log(process.env)
 const express = require("express");
@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.DB_URL, {
+mongoose.connect("mongodb+srv://marcokremer:tagimamg22@cluster0.kwnpsoa.mongodb.net/?retryWrites=true&w=majority", {
   useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true,
